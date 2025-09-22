@@ -312,16 +312,20 @@ button {
 .newsletter__form {
   padding: 0.5rem;
   border-radius: 10px;
-  background-color: white;
   width: 100%;
 
   display: flex;
   gap: 1rem;
+  flex-direction: column;
 }
 
 .newsletter__input {
-  background-color: transparent;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
   border: transparent;
+  text-align: center;
+
   font-size: 1rem;
   flex: 1;
   padding-left: 1rem;
@@ -334,6 +338,33 @@ button {
   border: transparent;
   background-color: rgba(255, 189, 58, 1);
   color: rgba(255, 255, 255, 1);
+  cursor: pointer;
+}
+
+@media (width >= 640px) {
+  .newsletter__form {
+    flex-direction: row;
+    background-color: white;
+  }
+
+  .newsletter__input {
+    background-color: transparent;
+    border-color: transparent;
+    outline: transparent;
+    font-size: 1rem;
+    flex: 1;
+    padding-left: 1rem;
+    text-align: left;
+  }
+
+  .newsletter__button {
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    border: transparent;
+    background-color: rgba(255, 189, 58, 1);
+    color: rgba(255, 255, 255, 1);
+  }
 }
 
 .brand-logo {
