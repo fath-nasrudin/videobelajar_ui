@@ -20,6 +20,18 @@ body {
   width: 100%;
 }
 
+.btn {
+  padding: 10px 26px;
+  border-radius: 0.625rem;
+  border: transparent;
+  font-size: 0.825rem;
+}
+
+.btn--primary {
+  background-color: #3ecf4c;
+  color: rgba(255, 255, 255, 1);
+}
+
 /* ===== hero section */
 .hero {
   background: url("/img/hero-bg.jpg") center/cover no-repeat;
@@ -83,10 +95,6 @@ body {
   .hero__subtitle {
     font-size: 1rem;
   }
-}
-
-.hero__button {
-  font-size: 1rem;
 }
 
 /* ===== course-list section ===== */
