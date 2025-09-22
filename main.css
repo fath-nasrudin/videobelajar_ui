@@ -32,6 +32,12 @@ body {
   color: rgba(255, 255, 255, 1);
 }
 
+@media (width >= 640px) {
+  .btn {
+    font-size: 1rem;
+  }
+}
+
 /* ===== hero section */
 .hero {
   background: url("/img/hero-bg.jpg") center/cover no-repeat;
@@ -76,7 +82,7 @@ body {
 
 .hero__title {
   font-size: 1.5rem;
-  font-weight: bold;
+  font-weight: 700;
   margin-bottom: 1rem;
 }
 
