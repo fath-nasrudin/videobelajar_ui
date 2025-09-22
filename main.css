@@ -342,7 +342,53 @@ button {
   color: rgba(255, 189, 58, 1);
 }
 
-.footer .nav ul {
+.footer {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.footer__detail {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+@media (width >= 640px) {
+  .footer__detail {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.footer__separator {
+  height: 33px;
+  width: 100%;
+  border-bottom: 1px solid rgba(58, 53, 65, 0.12);
+}
+
+.footer__icon {
+  width: 36px;
+  height: 36px;
+  border: 1px solid black;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer__icon > img {
+  display: block;
+  width: 60%;
+  height: 60%;
+}
+
+.nav-desktop {
+  display: none;
+  gap: 1rem;
+}
+
+.nav-desktop ul {
   list-style-type: none;
   color: rgba(51, 51, 51, 0.68);
   font-weight: 500;
@@ -352,15 +398,35 @@ button {
   gap: 0.5rem;
 }
 
-.footer .nav ul > :first-child {
+.nav-desktop ul > :first-child {
   color: rgba(34, 35, 37, 1);
   font-weight: 700;
 }
 
-.footer .nav {
+.nav-mobile {
   display: flex;
-  gap: 1rem;
+  flex-direction: column;
+  font-weight: 700;
+
+  display: flex;
+  gap: 0.5rem;
 }
+
+.nav-mobile img {
+  height: 16px;
+  width: 16px;
+}
+
+@media (width >= 640px) {
+  .nav-desktop {
+    display: flex;
+  }
+
+  .nav-mobile {
+    display: none;
+  }
+}
+
 /* utils */
 .space-x-4 > *:not(:last-child) {
   margin-bottom: 1rem;
@@ -378,8 +444,30 @@ button {
   flex-direction: column;
 }
 
+.flex-row {
+  flex-direction: row;
+}
+
+.wrap {
+  flex-wrap: wrap;
+}
+
+.wrap-reverse {
+  flex-wrap: wrap-reverse;
+}
+
 .justify-between {
   justify-content: space-between;
+}
+
+@media (min-width: 640px) {
+  .sm-justify-content {
+    justify-content: space-between;
+  }
+
+  .sm-flex-row {
+    flex-direction: row;
+  }
 }
 
 .items-center {
@@ -420,32 +508,4 @@ button {
 
 .text-secondary {
   color: rgba(58, 53, 65, 0.68);
-}
-
-.footer {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-.footer__separator {
-  height: 33px;
-  width: 100%;
-  border-bottom: 1px solid rgba(58, 53, 65, 0.12);
-}
-
-.footer__icon {
-  width: 36px;
-  height: 36px;
-  border: 1px solid black;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.footer__icon > img {
-  display: block;
-  width: 60%;
-  height: 60%;
 }
