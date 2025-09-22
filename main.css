@@ -99,7 +99,7 @@ a {
 
 .hero__subtitle {
   font-size: 0.825rem;
-  line-height: 1.6;
+  line-height: 1.4;
 }
 @media (min-width: 768px) {
   .hero__subtitle {
