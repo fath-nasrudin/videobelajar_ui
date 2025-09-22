@@ -10,6 +10,10 @@ body {
   font-family: "Poppins", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
+a {
+  cursor: pointer;
+}
+
 .section {
   padding: 4rem 1rem;
 }
@@ -355,6 +359,10 @@ body {
   justify-content: space-between;
 }
 
+.items-center {
+  align-items: center;
+}
+
 .gap-3 {
   gap: 0.75rem;
 }
@@ -385,4 +393,36 @@ body {
 
 .text-primary {
   color: rgba(34, 35, 37, 1);
+}
+
+.text-secondary {
+  color: rgba(58, 53, 65, 0.68);
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.footer__separator {
+  height: 33px;
+  width: 100%;
+  border-bottom: 1px solid rgba(58, 53, 65, 0.12);
+}
+
+.footer__icon {
+  width: 36px;
+  height: 36px;
+  border: 1px solid black;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer__icon > img {
+  display: block;
+  width: 60%;
+  height: 60%;
 }
