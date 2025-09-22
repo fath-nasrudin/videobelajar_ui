@@ -1,4 +1,25 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
+
+:root {
+  --ff-heading: "Poppins", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  --ff-body: "DM Sans", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+
+  --fs-base: 14px;
+  --fs-sm: calc(var(var(--fs-base) - 0.125rem));
+  --fs-lg: calc(var(var(--fs-base) lg 0.125rem));
+
+  --text-primary: rgba(34, 35, 37, 1);
+  --text-secondary: rgba(51, 51, 51, 0.68);
+
+  --border-color-1: rgba(58, 53, 65, 0.12);
+}
+
+@media (min-width >= 640px) {
+  :root {
+    --fs-base: 16px;
+  }
+}
 
 * {
   padding: 0;
@@ -7,11 +28,29 @@
 }
 
 body {
-  font-family: "Poppins", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: var(--ff-body);
 }
 
 a {
   cursor: pointer;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--ff-heading);
+}
+
+p {
+  font-family: var(--ff-body);
+}
+
+p,
+button {
+  font-size: var(--fs-base);
 }
 
 .section {
@@ -28,18 +67,12 @@ a {
   padding: 10px 26px;
   border-radius: 0.625rem;
   border: transparent;
-  font-size: 0.825rem;
+  font-size: var(--fs-sm);
 }
 
 .btn--primary {
   background-color: #3ecf4c;
   color: rgba(255, 255, 255, 1);
-}
-
-@media (width >= 640px) {
-  .btn {
-    font-size: 1rem;
-  }
 }
 
 /* ===== hero section */
@@ -97,16 +130,6 @@ a {
   }
 }
 
-.hero__subtitle {
-  font-size: 0.825rem;
-  line-height: 1.4;
-}
-@media (min-width: 768px) {
-  .hero__subtitle {
-    font-size: 1rem;
-  }
-}
-
 /* ===== course-list section ===== */
 .course-list__grid {
   display: grid;
@@ -147,11 +170,11 @@ a {
 }
 
 .course-card__title {
-  font-size: 1.125rem;
+  font-size: var(--fs-lg);
 }
 
 .course-card__desc {
-  font-size: 1rem;
+  font-size: var(--fs-base);
   color: rgb(58, 58, 58);
 
   display: -webkit-box;
@@ -183,13 +206,13 @@ a {
 }
 
 .instructor__name {
-  font-size: 1rem;
+  font-size: var(--fs-base);
   font-weight: 600;
   color: #111827;
 }
 
 .instructor__subtitle {
-  font-size: 0.825rem;
+  font-size: var(--fs-sm);
   color: #6b7280;
   font-weight: 400;
 }
@@ -204,7 +227,7 @@ a {
   align-items: center;
 }
 .course-card__rating {
-  font-size: 0.825rem;
+  font-size: var(--fs-sm);
 
   display: flex;
   gap: 0.5rem;
@@ -276,7 +299,7 @@ a {
 }
 
 .newsletter__subtitle {
-  font-size: 1.125rem;
+  font-size: var(--fs-lg);
 }
 
 .newsletter__desc {
@@ -376,11 +399,11 @@ a {
 }
 
 .fs-base {
-  font-size: 16px;
+  font-size: var(--fs-base);
 }
 
 .fs-lg {
-  font-size: 18px;
+  font-size: var(--fs-lg);
 }
 
 .fw-400 {
