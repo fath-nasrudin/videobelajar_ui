@@ -21,6 +21,7 @@
     --text-5xl--line-height: 1;
     --font-weight-semibold: 600;
     --font-weight-bold: 700;
+    --tracking-wide: 0.025em;
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
     --font-poppins: "Poppins", sans-serif;
@@ -28,6 +29,7 @@
     --color-dark-secondary: rgba(51, 51, 51, 0.68);
     --color-light-primary: rgba(255, 255, 255, 1);
     --color-primary: rgba(62, 207, 76, 1);
+    --color-tertiary: rgba(246, 73, 32, 1);
     --font-body: var(--font-dmsans);
   }
 }
@@ -192,6 +194,12 @@
   .top-0 {
     top: calc(var(--spacing) * 0);
   }
+  .bottom-0 {
+    bottom: calc(var(--spacing) * 0);
+  }
+  .bottom-\[-6px\] {
+    bottom: -6px;
+  }
   .left-0 {
     left: calc(var(--spacing) * 0);
   }
@@ -201,8 +209,17 @@
   .flex {
     display: flex;
   }
+  .table {
+    display: table;
+  }
+  .h-\[6px\] {
+    height: 6px;
+  }
   .h-\[400px\] {
     height: 400px;
+  }
+  .w-\[52px\] {
+    width: 52px;
   }
   .w-full {
     width: 100%;
@@ -212,6 +229,12 @@
   }
   .max-w-\[1200px\] {
     max-width: 1200px;
+  }
+  .border-collapse {
+    border-collapse: collapse;
+  }
+  .resize {
+    resize: both;
   }
   .flex-col {
     flex-direction: column;
@@ -233,6 +256,13 @@
   }
   .gap-6 {
     gap: calc(var(--spacing) * 6);
+  }
+  .space-y-2 {
+    :where(& > :not(:last-child)) {
+      --tw-space-y-reverse: 0;
+      margin-block-start: calc(calc(var(--spacing) * 2) * var(--tw-space-y-reverse));
+      margin-block-end: calc(calc(var(--spacing) * 2) * calc(1 - var(--tw-space-y-reverse)));
+    }
   }
   .space-y-2\.5 {
     :where(& > :not(:last-child)) {
@@ -261,6 +291,13 @@
   .rounded-\[10px\] {
     border-radius: 10px;
   }
+  .border {
+    border-style: var(--tw-border-style);
+    border-width: 1px;
+  }
+  .bg-black {
+    background-color: var(--color-black);
+  }
   .bg-black\/80 {
     background-color: color-mix(in srgb, #000 80%, transparent);
     @supports (color: color-mix(in lab, red, red)) {
@@ -269,6 +306,9 @@
   }
   .bg-primary {
     background-color: var(--color-primary);
+  }
+  .bg-tertiary {
+    background-color: var(--color-tertiary);
   }
   .object-cover {
     object-fit: cover;
@@ -285,8 +325,14 @@
   .py-2 {
     padding-block: calc(var(--spacing) * 2);
   }
+  .py-3 {
+    padding-block: calc(var(--spacing) * 3);
+  }
   .py-7 {
     padding-block: calc(var(--spacing) * 7);
+  }
+  .pr-9 {
+    padding-right: calc(var(--spacing) * 9);
   }
   .text-center {
     text-align: center;
@@ -320,6 +366,13 @@
     --tw-tracking: 0.2px;
     letter-spacing: 0.2px;
   }
+  .tracking-wide {
+    --tw-tracking: var(--tracking-wide);
+    letter-spacing: var(--tracking-wide);
+  }
+  .whitespace-nowrap {
+    white-space: nowrap;
+  }
   .text-dark-secondary {
     color: var(--color-dark-secondary);
   }
@@ -328,6 +381,16 @@
   }
   .text-primary {
     color: var(--color-primary);
+  }
+  .text-tertiary {
+    color: var(--color-tertiary);
+  }
+  .underline {
+    text-decoration-line: underline;
+  }
+  .outline {
+    outline-style: var(--tw-outline-style);
+    outline-width: 1px;
   }
   .sm\:gap-16 {
     @media (width >= 40rem) {
@@ -365,6 +428,11 @@ body {
   inherits: false;
   initial-value: 0;
 }
+@property --tw-border-style {
+  syntax: "*";
+  inherits: false;
+  initial-value: solid;
+}
 @property --tw-font-weight {
   syntax: "*";
   inherits: false;
@@ -373,13 +441,20 @@ body {
   syntax: "*";
   inherits: false;
 }
+@property --tw-outline-style {
+  syntax: "*";
+  inherits: false;
+  initial-value: solid;
+}
 @layer properties {
   @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
     *, ::before, ::after, ::backdrop {
       --tw-space-y-reverse: 0;
       --tw-space-x-reverse: 0;
+      --tw-border-style: solid;
       --tw-font-weight: initial;
       --tw-tracking: initial;
+      --tw-outline-style: solid;
     }
   }
 }

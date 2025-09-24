@@ -11,6 +11,7 @@
   --color-dark-secondary: rgba(51, 51, 51, 0.68);
   --color-light-primary: rgba(255, 255, 255, 1);
   --color-primary: rgba(62, 207, 76, 1);
+  --color-tertiary: rgba(246, 73, 32, 1);
 }
 
 @theme inline {
