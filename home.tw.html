@@ -6,7 +6,9 @@
     <link href="./output.tw.css" rel="stylesheet" />
   </head>
   <body>
-    <main class="py-7 px-5 sm:py-16 flex flex-col gap-6 sm:gap-16">
+    <main
+      class="py-7 px-5 sm:py-16 flex flex-col gap-6 sm:gap-16 overflow-hidden"
+    >
       <!-- HERO -->
       <section
         class="mx-auto w-full max-w-[1200px] h-[400px] relative rounded-[10px] overflow-hidden"
@@ -122,6 +124,46 @@
                 Rp 300K
               </h5>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- NEWSLETTER -->
+      <section class="mx-auto w-full max-w-[1200px] h-[400px] relative">
+        <img
+          src="./img/newsletter-bg.jpg"
+          class="absolute inset-0 w-full h-full object-cover"
+        />
+        <div
+          class="absolute inset-0 w-full h-full p-4 bg-dark-primary/80 text-light-primary flex flex-col justify-center items-center"
+        >
+          <div class="max-w-[525px] space-y-10">
+            <div class="text-center">
+              <p class="text-light-secondary font-medium text-base sm:text-lg">
+                NEWSLETTER
+              </p>
+              <h3 class="font-heading font-semibold text-2xl">
+                Mau Belajar Lebih Banyak?
+              </h3>
+              <p class="text-sm sm:text-base">
+                Daftarkan dirimu untuk mendapatkan informasi terbaru dan
+                penawaran spesial dari program-program terbaik hariesok.id
+              </p>
+            </div>
+            <form
+              class="flex flex-col sm:flex-row gap-6 sm:bg-light-primary p-2 rounded-[10px]"
+            >
+              <input
+                class="sm:flex-1 bg-light-primary px-4 py-2 rounded-lg placeholder:text-dark-secondary text-center sm:text-left text-dark-primary"
+                type="text"
+                placeholder="Masukkan Emailmu"
+              />
+              <button
+                class="px-4 py-2 rounded-lg bg-secondary text-light-primary"
+              >
+                Subscribe
+              </button>
+            </form>
           </div>
         </div>
       </section>
