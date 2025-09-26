@@ -6,6 +6,35 @@
     <link href="./output.tw.css" rel="stylesheet" />
   </head>
   <body>
+    <header
+      class="py-6 px-8 border-b border-border sticky top-0 bg-light-primary z-10 shadow-xl sm:shadow-none"
+    >
+      <div class="flex items-center mx-auto w-full max-w-[1200px]">
+        <div class="font-bold text-2xl font-poppins text-secondary mr-auto">
+          videobelajar
+        </div>
+
+        <!-- mobile menu button -->
+        <button class="sm:hidden">
+          <img src="./img/hamburger.svg" />
+        </button>
+
+        <!-- desktop menu -->
+        <button class="hidden sm:block text-dark-secondary font-body">
+          Kategori
+        </button>
+
+        <!-- profile image -->
+        <div
+          class="hidden sm:block ml-6 w-11 h-11 rounded-[10px] overflow-hidden"
+        >
+          <img
+            src="./img/profile-user.png"
+            class="block w-full h-full object-cover"
+          />
+        </div>
+      </div>
+    </header>
     <main
       class="py-7 px-5 sm:py-16 flex flex-col gap-6 sm:gap-16 overflow-hidden"
     >
