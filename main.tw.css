@@ -31,3 +31,15 @@ body {
 .container-default {
   @apply mx-auto w-full max-w-[1200px];
 }
+
+.heading-1 {
+  @apply font-poppins font-bold text-2xl sm:text-5xl;
+}
+
+.heading-3 {
+  @apply font-poppins font-semibold text-2xl sm:text-[2rem];
+}
+
+.heading-6 {
+  @apply font-poppins font-semibold text-base sm:text-lg;
+}
