@@ -9,6 +9,7 @@
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
+    --color-yellow-400: oklch(85.2% 0.199 91.936);
     --color-green-100: oklch(96.2% 0.044 156.743);
     --color-green-200: oklch(92.5% 0.084 155.995);
     --color-green-500: oklch(72.3% 0.219 149.579);
@@ -55,6 +56,8 @@
     --color-light-primary: rgba(255, 255, 255, 1);
     --color-light-secondary: rgba(193, 194, 196, 1);
     --color-primary: rgba(62, 207, 76, 1);
+    --color-primary-100: rgba(226, 252, 217, 0.8);
+    --color-primary-200: rgba(192, 250, 180, 1);
     --color-secondary: rgba(255, 189, 58, 1);
     --color-tertiary: rgba(246, 73, 32, 1);
     --color-border: rgba(58, 53, 65, 0.12);
@@ -498,12 +501,6 @@
   .bg-light-secondary {
     background-color: var(--color-light-secondary);
   }
-  .bg-primary {
-    background-color: var(--color-primary);
-  }
-  .bg-secondary {
-    background-color: var(--color-secondary);
-  }
   .bg-tertiary {
     background-color: var(--color-tertiary);
   }
@@ -567,19 +564,12 @@
   .font-body {
     font-family: var(--font-dmsans);
   }
-  .font-heading {
-    font-family: var(--font-poppins);
-  }
   .font-poppins {
     font-family: var(--font-poppins);
   }
   .text-2xl {
     font-size: var(--text-2xl);
     line-height: var(--tw-leading, var(--text-2xl--line-height));
-  }
-  .text-base {
-    font-size: var(--text-base);
-    line-height: var(--tw-leading, var(--text-base--line-height));
   }
   .text-lg {
     font-size: var(--text-lg);
@@ -588,10 +578,6 @@
   .text-sm {
     font-size: var(--text-sm);
     line-height: var(--tw-leading, var(--text-sm--line-height));
-  }
-  .text-xl {
-    font-size: var(--text-xl);
-    line-height: var(--tw-leading, var(--text-xl--line-height));
   }
   .text-xs {
     font-size: var(--text-xs);
@@ -788,18 +774,6 @@
       text-align: left;
     }
   }
-  .sm\:text-base {
-    @media (width >= 40rem) {
-      font-size: var(--text-base);
-      line-height: var(--tw-leading, var(--text-base--line-height));
-    }
-  }
-  .sm\:text-lg {
-    @media (width >= 40rem) {
-      font-size: var(--text-lg);
-      line-height: var(--tw-leading, var(--text-lg--line-height));
-    }
-  }
   .sm\:shadow-none {
     @media (width >= 40rem) {
       --tw-shadow: 0 0 #0000;
@@ -895,6 +869,47 @@ body {
     line-height: var(--tw-leading, var(--text-sm--line-height));
   }
 }
+.btn {
+  cursor: pointer;
+  border-radius: 10px;
+  padding-inline: 1.625rem;
+  padding-block: calc(var(--spacing) * 2.5);
+  font-family: var(--font-dmsans);
+  font-size: var(--text-sm);
+  line-height: var(--tw-leading, var(--text-sm--line-height));
+  --tw-font-weight: var(--font-weight-bold);
+  font-weight: var(--font-weight-bold);
+  transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to, opacity, box-shadow, transform, translate, scale, rotate, filter, -webkit-backdrop-filter, backdrop-filter, display, content-visibility, overlay, pointer-events;
+  transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
+  transition-duration: var(--tw-duration, var(--default-transition-duration));
+  --tw-duration: 300ms;
+  transition-duration: 300ms;
+  @media (width >= 40rem) {
+    font-size: var(--text-base);
+    line-height: var(--tw-leading, var(--text-base--line-height));
+  }
+}
+.btn--primary {
+  background-color: var(--color-primary);
+  color: var(--color-light-primary);
+  &:active {
+    background-color: var(--color-green-600);
+  }
+}
+.btn--primary-shadowed {
+  background-color: var(--color-primary-100);
+  color: var(--color-primary);
+  &:active {
+    background-color: var(--color-primary-200);
+  }
+}
+.btn--secondary {
+  background-color: var(--color-secondary);
+  color: var(--color-light-primary);
+  &:active {
+    background-color: var(--color-yellow-400);
+  }
+}
 @property --tw-space-y-reverse {
   syntax: "*";
   inherits: false;
@@ -983,6 +998,10 @@ body {
   inherits: false;
   initial-value: 0 0 #0000;
 }
+@property --tw-duration {
+  syntax: "*";
+  inherits: false;
+}
 @layer properties {
   @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
     *, ::before, ::after, ::backdrop {
@@ -1005,6 +1024,7 @@ body {
       --tw-ring-offset-width: 0px;
       --tw-ring-offset-color: #fff;
       --tw-ring-offset-shadow: 0 0 #0000;
+      --tw-duration: initial;
     }
   }
 }

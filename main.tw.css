@@ -13,6 +13,10 @@
   --color-light-secondary: rgba(193, 194, 196, 1);
 
   --color-primary: rgba(62, 207, 76, 1);
+  --color-primary-100: rgba(226, 252, 217, 0.8);
+  --color-primary-200: rgba(192, 250, 180, 1);
+  --color-primary-300: rgba(148, 240, 139, 1);
+  --color-primary-400: rgba(107, 226, 107, 1);
   --color-secondary: rgba(255, 189, 58, 1);
   --color-tertiary: rgba(246, 73, 32, 1);
 
@@ -58,4 +62,21 @@ body {
 
 .body-small {
   @apply text-xs sm:text-sm font-body;
+}
+
+/* components */
+.btn {
+  @apply px-[1.625rem] py-2.5 rounded-[10px] text-sm sm:text-base font-body font-bold cursor-pointer transition duration-300;
+}
+
+.btn--primary {
+  @apply bg-primary text-light-primary active:bg-green-600;
+}
+
+.btn--primary-shadowed {
+  @apply bg-primary-100 text-primary active:bg-primary-200;
+}
+
+.btn--secondary {
+  @apply bg-secondary text-light-primary active:bg-yellow-400;
 }
