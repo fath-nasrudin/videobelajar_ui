@@ -57,6 +57,7 @@
     --color-primary-200: rgba(192, 250, 180, 1);
     --color-secondary: rgba(255, 189, 58, 1);
     --color-tertiary: rgba(246, 73, 32, 1);
+    --color-mbg-primary: rgba(255, 255, 255, 1);
     --color-border: rgba(58, 53, 65, 0.12);
     --font-body: var(--font-dmsans);
   }
@@ -330,9 +331,6 @@
   .w-\[52px\] {
     width: 52px;
   }
-  .w-\[82px\] {
-    width: 82px;
-  }
   .w-full {
     width: 100%;
   }
@@ -353,9 +351,6 @@
   }
   .flex-1 {
     flex: 1;
-  }
-  .shrink-0 {
-    flex-shrink: 0;
   }
   .cursor-pointer {
     cursor: pointer;
@@ -695,16 +690,6 @@
       display: inline;
     }
   }
-  .sm\:aspect-video {
-    @media (width >= 40rem) {
-      aspect-ratio: var(--aspect-video);
-    }
-  }
-  .sm\:w-full {
-    @media (width >= 40rem) {
-      width: 100%;
-    }
-  }
   .sm\:flex-1 {
     @media (width >= 40rem) {
       flex: 1;
@@ -923,6 +908,29 @@ body {
   @media (width >= 40rem) {
     font-size: var(--text-base);
     line-height: var(--tw-leading, var(--text-base--line-height));
+  }
+}
+.card {
+  border-radius: 10px;
+  border-style: var(--tw-border-style);
+  border-width: 1px;
+  border-color: var(--color-border);
+  background-color: var(--color-mbg-primary);
+  padding: calc(var(--spacing) * 4);
+}
+.card-img {
+  aspect-ratio: 1 / 1;
+  height: 82px;
+  border-radius: var(--radius-lg);
+  object-fit: cover;
+  @media (width >= 40rem) {
+    aspect-ratio: var(--aspect-video);
+  }
+  @media (width >= 40rem) {
+    height: auto;
+  }
+  @media (width >= 40rem) {
+    width: 100%;
   }
 }
 @property --tw-space-y-reverse {
