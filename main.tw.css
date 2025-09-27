@@ -65,6 +65,8 @@ body {
 }
 
 /* components */
+
+/* Button Components */
 .btn {
   @apply px-[1.625rem] py-2.5 rounded-[10px] text-sm sm:text-base font-body font-bold cursor-pointer transition duration-300;
 }
@@ -79,4 +81,13 @@ body {
 
 .btn--secondary {
   @apply bg-secondary text-light-primary active:bg-yellow-400;
+}
+
+/* Form Components */
+
+.form-label {
+  @apply block text-sm sm:text-base font-medium text-dark-secondary mb-1;
+}
+.form-input {
+  @apply w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-green-500 text-sm sm:text-base font-body text-dark-primary placeholder:text-dark-secondary;
 }
