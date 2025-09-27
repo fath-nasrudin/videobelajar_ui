@@ -295,11 +295,11 @@
   .h-5 {
     height: calc(var(--spacing) * 5);
   }
+  .h-7 {
+    height: calc(var(--spacing) * 7);
+  }
   .h-8 {
     height: calc(var(--spacing) * 8);
-  }
-  .h-9 {
-    height: calc(var(--spacing) * 9);
   }
   .h-11 {
     height: calc(var(--spacing) * 11);
@@ -552,10 +552,6 @@
   }
   .font-poppins {
     font-family: var(--font-poppins);
-  }
-  .text-2xl {
-    font-size: var(--text-2xl);
-    line-height: var(--tw-leading, var(--text-2xl--line-height));
   }
   .text-lg {
     font-size: var(--text-lg);
@@ -932,6 +928,9 @@ body {
   @media (width >= 40rem) {
     width: 100%;
   }
+}
+.brand {
+  height: calc(var(--spacing) * 7);
 }
 @property --tw-space-y-reverse {
   syntax: "*";

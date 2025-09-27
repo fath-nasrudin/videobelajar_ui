@@ -104,3 +104,8 @@ body {
 .card-img {
   @apply h-[82px] sm:h-auto sm:w-full aspect-square sm:aspect-video object-cover rounded-lg;
 }
+
+/* brand component */
+.brand {
+  @apply h-7;
+}
